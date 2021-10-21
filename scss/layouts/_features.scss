@@ -1,0 +1,29 @@
+// Features
+.features {
+  padding: 0 1.5rem;
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__divder {
+    width: 150px;
+    margin-top: clamp(140px, 20vw, 305px);
+    margin-bottom: 2.5rem;
+  }
+
+  &__heading {
+    color: $clr-grey-4;
+    margin-bottom: 5rem;
+  }
+
+  &__features-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 56px;
+    @include for-tablet {
+      gap: 30px;
+    }
+  }
+}

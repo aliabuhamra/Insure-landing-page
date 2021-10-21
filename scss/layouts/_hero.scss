@@ -1,0 +1,85 @@
+// Hero
+.hero {
+  position: relative;
+  background: $clr-grey-3;
+
+  @include for-tablet {
+    padding: 0 1.5rem;
+  }
+
+  &__divder {
+    visibility: hidden;
+    @include for-tablet {
+      visibility: visible;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    @include for-tablet {
+      flex-direction: row-reverse;
+      max-height: 600px;
+      padding-top: 105px;
+      gap: 2rem;
+    }
+  }
+
+  &__img {
+    picture {
+      display: flex;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 5.8125rem 1.5rem;
+    text-align: center;
+    @include for-tablet {
+      position: static;
+      max-width: 33.75rem;
+      text-align: start;
+      padding: 0;
+    }
+    &::before {
+      content: url(../../images/bg-pattern-intro-left-mobile.svg);
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: top left;
+      left: 0;
+      top: 0;
+      @include for-tablet {
+        content: url(../../images/bg-pattern-intro-left-desktop.svg);
+        top: 414px;
+      }
+    }
+
+    &::after {
+      content: url(../../images/bg-pattern-intro-right-mobile.svg);
+      position: absolute;
+      right: 0;
+      @include for-tablet {
+        top: 0;
+        right: -65px;
+        content: url(../../images/bg-pattern-intro-right-desktop.svg);
+      }
+    }
+  }
+
+  &__heading {
+    color: $clr-grey-0;
+    letter-spacing: -0.67px;
+    margin-bottom: 1rem;
+  }
+
+  &__subheading {
+    color: $clr-grey-0;
+    margin-bottom: clamp(2rem, 5vw, 1.5rem);
+  }
+}

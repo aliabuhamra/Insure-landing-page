@@ -1,0 +1,85 @@
+// Header
+.header {
+  padding: 0 1.5rem;
+  position: relative;
+  &__content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+  &__nav {
+    z-index: 999;
+    @include for-phone {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 0;
+      visibility: hidden;
+    }
+  }
+
+  &__nav--active {
+    @include for-phone {
+      background-color: $clr-grey-4;
+      visibility: visible;
+      transition: all 0.5s ease-out;
+      height: calc(100vh - 10rem);
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    @include for-phone {
+      flex-direction: column;
+      gap: 24px;
+      text-align: center;
+      padding: 40px 1.5rem 0;
+      height: inherit;
+    }
+    @include for-tablet {
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+
+  &__list::before {
+    @include for-phone {
+      content: "";
+      position: absolute;
+      background-image: url(../../images/bg-pattern-mobile-nav.svg);
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: 100% 245px;
+      left: 0;
+      right: 0;
+      height: 15.3rem;
+      bottom: 0;
+    }
+  }
+
+  &__link {
+    font-size: 1.25rem;
+    font-weight: $fw-700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.36px;
+    @include for-phone {
+      color: $clr-grey-0;
+    }
+    @include for-tablet {
+      font-size: 0.8125rem;
+      color: $clr-grey-2;
+      &:hover {
+        color: $clr-grey-4;
+      }
+    }
+  }
+}
+
+// ========
+// BUTTON
+// ========

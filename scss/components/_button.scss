@@ -1,0 +1,57 @@
+//Button
+.btn {
+  background: none;
+  border: 1.6px solid $clr-grey-0;
+  color: $clr-grey-0;
+  cursor: pointer;
+  font-weight: $fw-700;
+  letter-spacing: 1.36px;
+  text-transform: uppercase;
+  height: 40px;
+  width: 160px;
+  z-index: 1;
+  @include for-phone {
+    font-size: 1.25rem;
+  }
+  @include for-tablet {
+    font-size: 0.8125rem;
+  }
+
+  &--header {
+    @include for-phone {
+      width: 100%;
+    }
+  }
+
+  &--header:hover {
+    @include for-phone {
+      background-color: $clr-grey-0;
+      color: $clr-grey-3;
+    }
+  }
+
+  &--black {
+    @include for-phone {
+      color: $clr-grey-0;
+      border: 1.6px solid $clr-grey-0;
+    }
+    color: $clr-grey-4;
+    border: 1.6px solid $clr-grey-4;
+    &:hover {
+      background-color: $clr-grey-4;
+      color: $clr-grey-0;
+    }
+  }
+
+  &--white {
+    &:hover {
+      background-color: $clr-grey-0;
+      color: $clr-grey-3;
+    }
+  }
+
+  &__hero {
+    width: clamp(146px, 5vw, 148px);
+    font-size: 13px;
+  }
+}

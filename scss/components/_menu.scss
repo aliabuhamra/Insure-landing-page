@@ -1,0 +1,38 @@
+// Menu Header
+.hamburger-menu {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border-color: $clr-grey-4;
+  @include for-tablet {
+    display: none;
+  }
+  &__bar {
+    transition: all 0.3s;
+    background: black;
+    height: 1.5px;
+    width: 16px;
+  }
+
+  &__bar:not(:last-child) {
+    margin-bottom: 3px;
+  }
+}
+
+.hamburger-menu--open {
+  transition: all 0.3s;
+  .hamburger-menu__bar--top {
+    transform: rotate(45deg) translate(3px, 3px);
+  }
+  .hamburger-menu__bar--middle {
+    transform: rotate(-45deg);
+  }
+  .hamburger-menu__bar--bottom {
+    display: none;
+  }
+}

@@ -1,0 +1,49 @@
+// cta
+.cta {
+  padding: 0 1.5rem;
+  margin: clamp(8.75rem, 12vw, 9.375rem) 0;
+
+  &__content-wrapper {
+    position: relative;
+    background-color: $clr-grey-3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 72px 24px;
+    @include for-tablet {
+      flex-direction: row;
+      align-items: center;
+      padding: 72px 80px;
+    }
+  }
+
+  &__content-wrapper::after {
+    content: url(../../images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    @include for-tablet {
+      content: url(../../images/bg-pattern-how-we-work-desktop.svg);
+    }
+  }
+
+  &__heading {
+    color: $clr-grey-0;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    letter-spacing: -0.56px;
+    text-align: center;
+    margin-bottom: 40px;
+    @include for-tablet {
+      text-align: start;
+      margin: 0;
+      max-width: 490px;
+    }
+  }
+
+  &__btn {
+    font-size: 13px;
+  }
+}
