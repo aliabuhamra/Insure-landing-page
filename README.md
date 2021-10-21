@@ -1,8 +1,8 @@
 # Frontend Mentor - Insure landing page
 
-![github repo size](https://img.shields.io/github/repo-size/AliABUHAMRA/card-component)
-![github contributors](https://img.shields.io/github/contributors/AliABUHAMRA/card-component)
-![github twiter](https://img.shields.io/twitter/follow/AliAbuhumra?style=social)
+![github repo size](https://img.shields.io/github/repo-size/AliABUHAMRA/Insure-landing-page)
+![github contributors](https://img.shields.io/github/contributors/AliABUHAMRA/Insure-landing-page)
+![github twiter](https://img.shields.io/twitter/follow/AliBearrr?style=social)
 
 <!-- ![podcast preview](./design/desktop-preview.jpg) -->
 
